@@ -56,12 +56,28 @@ git commit -m "add base files"
 git push
 ```
 
-Your Parse server is now in production:
-```
-curl -v http://<yourhost>:1337
-```
+Your Parse server is now in production. Every time you want to modify the cloud, you just need to push to restart the server with the new files.
 
 A file `cloud/server.js` allows you to configure the express server before it is started. You can configure new routes or any express behavior with it.
+
+## Verification
+
+```
+curl -v http://<yourhost>:1337
+
+curl -X POST \
+  -H "X-Parse-Application-Id: <YOUR_APP_ID>" \
+  -H "Content-Type: application/json" \
+  -d '{"score":1337,"playerName":"Sean Plott","cheatMode":false}' \
+  http://<yourhost>:1337/parse/classes/GameScore
+
+curl -X GET \
+  -H "X-Parse-Application-Id: <YOUR_APP_ID>" \
+  -H "X-Parse-Master-Key: <YOUR_APP_MASTER_KEY>" \
+  http://<yourhost>:1337/parse/classes/GameScore
+```
+
+You can use https://robomongo.org/ to see your db.
 
 ## Deploy with your own mongodb container
 
