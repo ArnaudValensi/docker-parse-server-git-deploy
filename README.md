@@ -8,7 +8,7 @@ Quickly and easily install a Parse server and deploy code using git push.
 
 You should not have to write any code to have a production server, like you would with a parse.com service.
 
-Pull-Request are welcomed
+Pull-Request are welcomed.
 
 ## Quick start
 
@@ -20,7 +20,7 @@ Pull-Request are welcomed
 cp -r example/data /srv/parse-data
 ```
 
-* Replace the ssh public key in `/srv/parse-data/keys` by yours
+* Replace the ssh public key in `/srv/parse-data/keys` by your own.
 
 * Execute the following command:
 
@@ -44,7 +44,7 @@ Replace `<appId>` and `<masterKey>` too.
 git clone ssh://root@<yourhost>:2222/srv/repo.git ~/parse-cloud
 ```
 
-> Replace `<yourhost>` by your host
+> Replace `<yourhost>` by your own host.
 
 * Add the code in `example/parse-cloud` into your repo and push:
 
@@ -58,7 +58,7 @@ git push
 
 Your Parse server is now in production. Every time you want to modify the cloud, you just need to push to restart the server with the new files.
 
-A file `cloud/server.js` allows you to configure the express server before it is started. You can configure new routes or any express behavior with it.
+The file `cloud/server.js` allows you to configure the express server before it is started. You can modify it to configure new routes or any express behavior.
 
 ## Verification
 
