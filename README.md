@@ -108,7 +108,7 @@ docker run -d \
 * Specify parse cloud code volume container: `--volumes-from parse-cloud-code`
 * Specify parse-server prefix: `-e PARSE_MOUNT=/parse`
 
-## To build the container frm the `Dockerfile`
+## To build the container from the `Dockerfile`
 
 ```
 docker build -t parse-server .
