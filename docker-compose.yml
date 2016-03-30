@@ -1,6 +1,6 @@
 parse-server:
   #build: .
-  image: yongjhih/parse-server
+  image: arnaudvalensi/docker-parse-server-git-deploy:latest
   ports:
     - "1337:1337"
     - "2222:22"
